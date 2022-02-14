@@ -398,7 +398,7 @@ function App(props) {
           <Col span={8} style={{ textAlign: "center", opacity: 1 }}>
             <Button
               onClick={() => {
-                window.open("https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA");
+                window.open("https://github.com/feifanjasmineguan/Blockchain-GymCoin");
               }}
               size="large"
               shape="round"
@@ -406,7 +406,7 @@ function App(props) {
               <span style={{ marginRight: 8 }} role="img" aria-label="support">
                 💬
               </span>
-              Support
+              White Paper
             </Button>
           </Col>
         </Row>
