@@ -1,25 +1,26 @@
 pragma solidity >=0.8.0 <0.9.0;
 //SPDX-License-Identifier: MIT
 
-import "hardhat/console.sol";
-// import "@openzeppelin/contracts/access/Ownable.sol"; 
+// import "hardhat/console.sol";
+import "@openzeppelin/contracts/access/Ownable.sol"; 
+import "@openzeppelin/contracts/utils/Strings.sol";
 // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
-contract YourContract {
+contract YourContract is Ownable {
 
   // event SetPurpose(address sender, string purpose);
 
-  // string public purpose = "Building Unstoppable Apps!!!";
+//   string public purpose = "Building Unstoppable Apps!!!";
 
   constructor() payable {
     // what should we do on deploy?
   }
 
-  // function setPurpose(string memory newPurpose) public {
-  //     purpose = newPurpose;
-  //     console.log(msg.sender,"set purpose to",purpose);
-  //     // emit SetPurpose(msg.sender, purpose);
-  // }
+//   function setPurpose(string memory newPurpose) public onlyOwner {
+//       purpose = newPurpose;
+//     //   console.log(msg.sender,"set purpose to",purpose);
+//       // emit SetPurpose(msg.sender, purpose);
+//   }
 
   // to support receiving ETH by default
   receive() external payable {}
@@ -55,6 +56,14 @@ contract YourContract {
   }
 
   mapping(address => User) public Users;
+  string public purpose = "";
+
+
+  function fetchBalance() public {
+        User storage sender = Users[msg.sender];
+        purpose =  Strings.toString(sender.balance);
+    }  
+
 
   function Register(bytes32 userid, uint [] memory deviceIDs) public {
         User storage sender = Users[msg.sender];

@@ -167,6 +167,7 @@ function App(props) {
   ]);
 
   // keep track of a variable from the contract in the local React state:
+  const temp_balance = useContractReader(readContracts, "YourContract", "temp_balance");
   const purpose = useContractReader(readContracts, "YourContract", "purpose");
 
   /*
@@ -319,6 +320,7 @@ function App(props) {
             writeContracts={writeContracts}
             readContracts={readContracts}
             purpose={purpose}
+            temp_balance = {temp_balance}
           />
         </Route>
         <Route path="/mainnetdai">
