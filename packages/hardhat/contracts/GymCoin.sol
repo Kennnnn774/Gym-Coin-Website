@@ -11,7 +11,6 @@ contract YourContract is Ownable {
   constructor() payable {
   }
 
-  // to support receiving ETH by default
   receive() external payable {}
   fallback() external payable {}
 
@@ -46,11 +45,11 @@ contract YourContract is Ownable {
     }  
 
 
-  function Register(bytes32 userid, uint [] memory deviceIDs) public {
+  function Register(bytes32 userID, uint [] memory deviceIDs) public {
         User storage sender = Users[msg.sender];
         require(!sender.registered, "You have already registered");
 
-        sender.userID = userid;
+        sender.userID = userID;
         sender.deviceIDs = deviceIDs;
         sender.balance = 0;
         sender.balance_reset = 0;
@@ -61,28 +60,28 @@ contract YourContract is Ownable {
   function add_device(uint newDeviceID) public {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
-        // add a new device
+
         sender.deviceIDs.push(newDeviceID);
   }
 
-  function add_exercise(bytes32 userid, uint deviceid, uint heartrate1, uint workout_time_in_seconds, uint calories) public {
+  function add_exercise(bytes32 userID, uint deviceID, uint heart_rate, uint workout_time_in_seconds, uint calories) public {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
-        require(sender.userID == userid, "Wrong User ID");
+        require(sender.userID == userID, "Wrong User ID");
 
         // Check if the device is recorded
         bool Contain = false;
         for (uint i=0; i < sender.deviceIDs.length; i++) {
-            if (deviceid == sender.deviceIDs[i]) { Contain = true; }
+            if (deviceID == sender.deviceIDs[i]) { Contain = true; }
         }
         require(Contain == true, "Must use the correct device");
-
-        sender.balance += reward(heartrate1, workout_time_in_seconds, calories);
+        // Reward
+        sender.balance += reward(heart_rate, workout_time_in_seconds, calories);
   }
 
-  function reward(uint heartrate, uint workout_time_in_seconds, uint calories) private pure returns(uint earned){
+  function reward(uint heart_rate, uint workout_time_in_seconds, uint calories) private pure returns(uint earned){
       //The formula will divide by the heartrate to make it fair to those people who do weight training
-      earned = calories / heartrate * workout_time_in_seconds / 2000;
+      earned = calories / heart_rate * workout_time_in_seconds / 2000;
   }
 
   function transfer(address receiver, uint amount) public returns (bool) {
@@ -91,8 +90,8 @@ contract YourContract is Ownable {
 
         require(Users[msg.sender].balance >= amount, "Insufficient balance.");
         require(amount >= 0);
-
-        Users[msg.sender].balance -= amount; // GymCoin
+        // Modify balance
+        Users[msg.sender].balance -= amount;
         Users[receiver].balance += amount;
         return true;
     }
@@ -106,7 +105,7 @@ contract YourContract is Ownable {
         Posts.push(Post(user_sender.userID,context, block.timestamp) );
   }
 
-  function watchFivePosts(bytes32 userid) public view returns (string[] memory, uint[] memory) {
+  function watchFivePosts(bytes32 userID) public view returns (string[] memory, uint[] memory) {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
 
@@ -120,7 +119,7 @@ contract YourContract is Ownable {
 
         uint count = 0;
         for (uint i = Posts.length - 1; i > 0; i--) {
-            if (userid == Posts[i].userID) {
+            if (userID == Posts[i].userID) {
                 curr_posts[count] = Posts[i].context;
                 curr_posts_time[count] = Posts[i].time;
                 count ++;
