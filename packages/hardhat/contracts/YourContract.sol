@@ -64,7 +64,7 @@ contract YourContract is Ownable {
         sender.deviceIDs.push(newDeviceID);
   }
 
-  function add_exercise(bytes32 userID, uint deviceID, uint heart_rate, uint workout_time_in_seconds, uint calories) public {
+  function add_exercise(bytes32 userID, uint deviceID, uint heart_rate, uint workout_time_in_minutes, uint calories) public {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
         require(sender.userID == userID, "Wrong User ID");
@@ -76,12 +76,12 @@ contract YourContract is Ownable {
         }
         require(Contain == true, "Must use the correct device");
         // Reward
-        sender.balance += reward(heart_rate, workout_time_in_seconds, calories);
+        sender.balance += reward(heart_rate, workout_time_in_minutes, calories);
   }
 
-  function reward(uint heart_rate, uint workout_time_in_seconds, uint calories) private pure returns(uint earned){
+  function reward(uint heart_rate, uint workout_time_in_minutes, uint calories) private pure returns(uint earned){
       //The formula will divide by the heartrate to make it fair to those people who do weight training
-      earned = calories / heart_rate * workout_time_in_seconds / 2000;
+      earned = calories / heart_rate * workout_time_in_minutes * 60 / 2000;
   }
 
   function transfer(address receiver, uint amount) public returns (bool) {

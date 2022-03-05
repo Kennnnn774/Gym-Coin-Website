@@ -27,7 +27,7 @@ export default function ExampleUI({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 20 }}>
         <h1>💼Your Wallet:</h1>
         <h2>GymCoin Balance: {purpose}</h2>
-        <h5>(You need to click check botton below to update your wallet balance)</h5>
+        <h5>(You need to click check button below to update your wallet balance)</h5>
         <Divider />
         <div style={{ margin: 8 }}>
           <Button
