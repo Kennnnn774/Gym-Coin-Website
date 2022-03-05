@@ -16,7 +16,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
 
   return (
     <div>
-      <div style={{ margin: 100, textAlign: "left" }}>
+      <div style={{ marginLeft: 200, marginRight:100, marginTop: 10, textAlign: "left" }}>
         <h1>
             User Instructions
         </h1>
@@ -24,7 +24,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
         <h2>1. Set up Metamask</h2>
         <p>
           <ol type = "a">
-            <li>Download Metamask (only available as Chrome extension): https://metamask.io/download/</li>
+            <li>Download Metamask (only available as Chrome extension): <a href="https://metamask.io/download/" target="_blank" rel="noopener noreferrer">here</a> </li>
             <li>Register an account</li>
             <li>Change network to Ropsten Test Network</li>
             <li>Click “Buy” to obtain test Ether</li>
@@ -33,7 +33,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             <li>Now you’re all set to interact with our functions!</li>
           </ol>
         </p>
-        <img src = "https://i.ibb.co/gy66pCT/Screen-Shot-2022-02-21-at-9-06-37-PM.png" alt = "Metamask Account" width = "400" height = "700"></img>
+        <img src = "https://i.ibb.co/gy66pCT/Screen-Shot-2022-02-21-at-9-06-37-PM.png" alt = "Metamask Account" width = "400" height = "650"></img>
 
 
         <h2>2. Register Gym Coin Account</h2>
@@ -44,7 +44,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             </li>
           </ol>
         </p>
-        <img src = "https://i.ibb.co/c2JKM9w/Screen-Shot-2022-02-21-at-7-17-58-PM.png" alt = "Register Gym Coin Account" width = "800" height = "200"></img>
+        <img src = "https://i.ibb.co/c2JKM9w/Screen-Shot-2022-02-21-at-7-17-58-PM.png" alt = "Register Gym Coin Account" width = "750" height = "200"></img>
 
         <h2>3. Add Exercise</h2>
         <p>
@@ -54,7 +54,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             <li>The add_exercise() function will automatically reward you gym coin corresponding to your exercises</li>
           </ol>
         </p>
-        <img src = "https://i.ibb.co/mqJ1gYF/Screen-Shot-2022-02-21-at-7-22-32-PM.png" alt = "Register Gym Coin Account" width = "800" height = "300"></img>
+        <img src = "https://i.ibb.co/mqJ1gYF/Screen-Shot-2022-02-21-at-7-22-32-PM.png" alt = "Register Gym Coin Account" width = "750" height = "300"></img>
 
         <h2>4. Add Device</h2>
         <p>
@@ -72,13 +72,14 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             <li>Once you transacted with another user, they will be automatically added to your Friend List</li>
           </ol>
         </p>
-        <img src = "https://i.ibb.co/SJpDDtc/Screen-Shot-2022-02-21-at-8-01-54-PM.png" alt = "Register Gym Coin Account" width = "800" height = "200"></img>
+        <img src = "https://i.ibb.co/SJpDDtc/Screen-Shot-2022-02-21-at-8-01-54-PM.png" alt = "Register Gym Coin Account" width = "750" height = "200"></img>
 
 
         <h2>6. Post</h2>
         <p>
           <ol type = "a">
-            <li>Our platform encourages users to share their exercise insights. You can post any comments about your workout or experiences, and the post will be pushed to all users on your friend list. </li>
+            <li>Our platform encourages users to share their exercise insights. Please post comments on your experiences. </li>
+            <li>Your posts on your experiences will be pushed to all users on your friend list. </li>
           </ol>
         </p>
 

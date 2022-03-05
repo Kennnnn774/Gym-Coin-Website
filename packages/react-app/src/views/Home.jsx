@@ -17,10 +17,10 @@ function Home({ yourLocalBalance, readContracts }) {
 
   return (
     // <div>
-      <div style={{margin: 80, textAlign: "left" }}>
-        <h1>
+      <div style={{marginLeft: 100, marginRight:100, marginTop: 10, textAlign: "left" }}>
+        <h2>
           Abstract
-        </h1> {/* Abstract */}
+        </h2> {/* Abstract */}
         <p>
           Nowadays, physical fitness and bodybuilding have become unprecedentedly popular. While it is usually easy for people to start doing exercises, one may find it difficult to persevere. There are many factors that lead to this phenomenon, including busy schedules, intense training plans, no workout buddies, etc. All these factors gradually lead to a loss in motivation, causing people to become more reluctant, and eventually stop working out completely. Even though pre-workout products can relieve this unwillingness, its effect is temporary and can lead to dependence on the product. With the development of technology and the global market, blockchain technology and cryptocurrency came with it and inspired us to develop a blockchain-based application that incorporates exercising, entertainment, and socialization through the implementation of a platform that rewards users for staying fit and active. By creating such a platform that targets people’s demand for personalized socializing and motivation for exercising, we expect to promote a healthy lifestyle, the growth of the gym industry, and a way for people into fitness to socialize.
         </p>
@@ -32,11 +32,11 @@ function Home({ yourLocalBalance, readContracts }) {
         </img>
 
         <h2>2. Core Concept</h2>
-        <p>Users: the core of GymCoin. We focus on the quantity and quality of users and strive to add socio-economic values to our users by implementing an interactive platform to motivate users and as well as smart contracting for monetary incentive. There are naturally two types of users—producers and consumers. A consumer is one that participates in daily work-outs, purchases gym tutorials, exchanges for GymCoin rewards, claims ownership to interesting collections of images, and interacts with others. A producer is one that trades GymCoins or shares his exercise experience and expertise with the exchange of GymCoins.
+        <p><b>Users</b>: the core of GymCoin. We focus on the quantity and quality of users and strive to add socio-economic values to our users by implementing an interactive platform to motivate users and as well as smart contracting for monetary incentive. There are naturally two types of users—producers and consumers. A consumer is one that participates in daily work-outs, purchases gym tutorials, exchanges for GymCoin rewards, claims ownership to interesting collections of images, and interacts with others. A producer is one that trades GymCoins or shares his exercise experience and expertise with the exchange of GymCoins.
         </p>
-        <p>Smart Contracts: a monetary incentive to users, rewarding users with GymCoins and cash. We developed layered plans for cash bonuses catered to different needs of our users (Specified later).</p>
-        <p>Crypto-currency: crypto-transactions allowed between contracts and users to create a safe environment. Liquidity is preferred and promoted by the mechanisms.</p>
-        <p>Scaffold-ETH: a good visualization tool for smart contracts with diverse methods for User Interface. It would be the place of our main page, attracts users to interact with our smart contracts and enables users to query their current status/collections.</p>
+        <p><b>Smart Contracts</b>: a monetary incentive to users, rewarding users with GymCoins and cash. We developed layered plans for cash bonuses catered to different needs of our users (Specified later).</p>
+        <p><b>Crypto-currency</b>: crypto-transactions allowed between contracts and users to create a safe environment. Liquidity is preferred and promoted by the mechanisms.</p>
+        <p><b>Scaffold-ETH</b>: a good visualization tool for smart contracts with diverse methods for User Interface. It would be the place of our main page, attracts users to interact with our smart contracts and enables users to query their current status/collections.</p>
 
         <h2>3. Gym Coin Mechanism</h2>
         <ul>
@@ -47,9 +47,9 @@ function Home({ yourLocalBalance, readContracts }) {
             <ul>
               <li>Layered Plans for cash bonus:(Motivate personal work-out and transaction of GymCoins)</li>
                 <ul>
-                  <li>Get 5 extra coins for 25 GymCoin per week and 3 penalty</li>
-                  <li>Get 7 extra coins for 30 GymCoin per week and 4 penalty</li>
-                  <li>Get 9 extra coins for 35 GymCoin per week and 5 penalty</li>
+                  <li><b>Contract #100</b>: Get 5 extra coins for 25 GymCoin per week and 3 penalty</li>
+                  <li><b>Contract #200</b>: Get 7 extra coins for 30 GymCoin per week and 4 penalty</li>
+                  <li><b>Contract #300</b>: Get 9 extra coins for 35 GymCoin per week and 5 penalty</li>
                 </ul>
               <li>Post about your exercise insights and feels and share with your friends!</li>
             </ul>  

@@ -24,7 +24,7 @@ export default function ExampleUI({
       {/*
         ⚙️ Here is an example UI that displays and sets the purpose in your smart contract:
       */}
-      <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
+      <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 20 }}>
         <h1>💼Your Wallet:</h1>
         <h2>GymCoin Balance: {purpose}</h2>
         <h5>(You need to click check botton below to update your wallet balance)</h5>
