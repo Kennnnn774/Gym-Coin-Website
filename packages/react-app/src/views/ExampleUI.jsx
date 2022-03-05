@@ -61,7 +61,7 @@ export default function ExampleUI({
         Your Address:
         <Address address={address} ensProvider={mainnetProvider} fontSize={16} />
         <Divider />
-        Owner of the Blockchain:
+        Owner of the Contract:
         <Address
           address="0x765Ba3f7AD510a66cA690b8bA7B6402CAF2fDcB6" /* this will show as austingriffith.eth */
           ensProvider={mainnetProvider}

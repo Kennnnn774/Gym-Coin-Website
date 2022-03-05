@@ -21,16 +21,32 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             User Instructions
         </h1>
 
-        <h2>1. Register</h2>
+        <h2>1. Set up Metamask</h2>
+        <p>
+          <ol type = "a">
+            <li>Download Metamask (only available as Chrome extension): https://metamask.io/download/</li>
+            <li>Register an account</li>
+            <li>Change network to Ropsten Test Network</li>
+            <li>Click “Buy” to obtain test Ether</li>
+            <li>Scroll down to “Get Ether”</li>
+            <li>Click “request 1 ether from faucet”</li>
+            <li>Now you’re all set to interact with our functions!</li>
+          </ol>
+        </p>
+        <img src = "https://i.ibb.co/gy66pCT/Screen-Shot-2022-02-21-at-9-06-37-PM.png" alt = "Metamask Account" width = "400" height = "700"></img>
+
+
+        <h2>2. Register Gym Coin Account</h2>
         <p>
           <ol type = "a">
             <li>
-              Register with a Byte32 as user id & integer list as initial smart devices
+              Register with a string and convert it into Byte32 using "#" icon as your user id & a integer list as initial smart devices
             </li>
           </ol>
         </p>
+        <img src = "https://i.ibb.co/c2JKM9w/Screen-Shot-2022-02-21-at-7-17-58-PM.png" alt = "Register Gym Coin Account" width = "800" height = "200"></img>
 
-        <h2>2. Add Exercise</h2>
+        <h2>3. Add Exercise</h2>
         <p>
           <ol type = "a">
             <li>For each user id, you can choose the device you’re inputting exercise data from</li>
@@ -38,16 +54,17 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             <li>The add_exercise() function will automatically reward you gym coin corresponding to your exercises</li>
           </ol>
         </p>
+        <img src = "https://i.ibb.co/mqJ1gYF/Screen-Shot-2022-02-21-at-7-22-32-PM.png" alt = "Register Gym Coin Account" width = "800" height = "300"></img>
 
-        <h2>3. Add Device</h2>
+        <h2>4. Add Device</h2>
         <p>
           <ol type = "a">
             <li>You can add more devices whenever you want</li>
-            <li>For example, you can add Fitbit, Apple Watch, Treatmail, Elliptical machines etc</li>
+            <li>For example, you can add Fitbit, Apple Watch, Treadmail, Elliptical machines etc</li>
           </ol>
         </p>
 
-        <h2>4. Transfer</h2>
+        <h2>5. Transfer</h2>
         <p>
           <ol type = "a">
             <li>Our platform also allows you to transfer Gym Coin to another user if you know their address</li>
@@ -55,20 +72,29 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
             <li>Once you transacted with another user, they will be automatically added to your Friend List</li>
           </ol>
         </p>
+        <img src = "https://i.ibb.co/SJpDDtc/Screen-Shot-2022-02-21-at-8-01-54-PM.png" alt = "Register Gym Coin Account" width = "800" height = "200"></img>
 
-        <h2>5. Post</h2>
+
+        <h2>6. Post</h2>
         <p>
           <ol type = "a">
             <li>Our platform encourages users to share their exercise insights. You can post any comments about your workout or experiences, and the post will be pushed to all users on your friend list. </li>
           </ol>
         </p>
 
-        <h2>6. Watch Five Posts</h2>
+        <h2>7. Watch Five Posts</h2>
         <p>
           <ol type = "a">
             <li>You can check the most recent five posts of a user. </li>
           </ol>
         </p>
+
+        <p>          </p>
+        <p>          </p>
+        <p>     _    </p>
+        <p>          </p>
+        <p>          </p>
+        <p>     _    </p>
 
 
       </div>

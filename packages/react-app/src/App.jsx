@@ -35,18 +35,13 @@ import { useStaticJsonRPC } from "./hooks";
 const { ethers } = require("ethers");
 /*
     Welcome to 🏗 scaffold-eth !
-
     Code:
     https://github.com/scaffold-eth/scaffold-eth
-
     Support:
     https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA
     or DM @austingriffith on twitter or telegram
-
     You should get your own Alchemy.com & Infura.io ID and put it in `constants.js`
     (this is your connection to the main Ethereum network for ENS etc.)
-
-
     🌏 EXTERNAL CONTRACTS:
     You can also bring in contract artifacts in `constants.js`
     (and then use the `useExternalContractLoader()` hook!)
@@ -261,14 +256,14 @@ function App(props) {
         <Menu.Item key="/">
           <Link to="/">White Paper</Link> {/* link to Home.jsx */}
         </Menu.Item>
-        <Menu.Item key="/debug">
-          <Link to="/debug">Deploy</Link>
-        </Menu.Item>
         <Menu.Item key="/hints">
           <Link to="/hints">User Instruction</Link>
         </Menu.Item>
+        <Menu.Item key="/debug">
+          <Link to="/debug">Deploy</Link>
+        </Menu.Item>
         <Menu.Item key="/exampleui">
-          <Link to="/exampleui">ExampleUI</Link>
+          <Link to="/exampleui">Wallet</Link>
         </Menu.Item>
         {/* <Menu.Item key="/mainnetdai">
           <Link to="/mainnetdai">Mainnet DAI</Link>

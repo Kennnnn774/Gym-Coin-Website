@@ -16,8 +16,8 @@ function Home({ yourLocalBalance, readContracts }) {
   const purpose = useContractReader(readContracts, "YourContract", "purpose");
 
   return (
-    <div>
-      <div style={{margin: 100, textAlign: "left" }}>
+    // <div>
+      <div style={{margin: 80, textAlign: "left" }}>
         <h1>
           Abstract
         </h1> {/* Abstract */}
@@ -26,139 +26,77 @@ function Home({ yourLocalBalance, readContracts }) {
         </p>
 
         <h2>1. Introduction</h2>
-        <p>The idea is that users use smart devices like watches/rings or treadmills, choose their desired type of exercise, and trace their heart rate & time for calories consumption. One can get a certain amount of GymCoins for calories burnt. The GymCoins can then be used in a gaming platform in which users customize their own avatars. All in-game item purchases are done with GymCoins, and one can trade GymCoins for cash with other users. Data storage and management as well as the trading process will be done on the Ethereum blockchain using Solidity. We expect this integrated platform will promote the circulation of GymCoin within its community and increase GymCoin’s value through interactions. With fitness tech being the rising trend of the fitness industry and the gradual maturity of blockchain technology, we expect GymCoin to bridge the two markets. 
+        <p>The idea is that our users can connect to their smart devices like watches/rings, choose their desired type of exercise, and trace their heart rate & time for calories consumption. They will be rewarded a certain amount of GymCoins for calories burnt. GymCoins can then be used in a NFT platform where users can claim ownership to images of their interest and trade with each other. We could also potentially explore a gaming platform. Note that one can also trade GymCoins for cash with other users. Data storage and management as well as the trading process will be done on the Ethereum blockchain using Solidity and the User Interface will be derived from the Scaffold-ETH application. We expect this integrated platform to promote the circulation of GymCoin within its community and increase GymCoins’ value through interactions. With the rise of fitness tech and the gradual maturity of blockchain technology, we expect GymCoin to bridge the two markets.
         </p>
         <img src = "https://res.cloudinary.com/kisi-kloud/image/upload/c_lfill,dpr_auto,f_auto,q_auto:good,w_3000/v1/collections/blog/future-fitness-industry/future-of-the-fitness-industry-5f731ac63ba7a5a8b65b00ad" alt = "Top Fitness Trends" width = "500" height = "400">
         </img>
 
         <h2>2. Core Concept</h2>
-        <p>Users: the core of GymCoin. We focus on the quantity and quality of users and strive to add socio-economic values to our users by implementing an interactive platform to motivate users and as well as smart contracting for monetary incentive. There are naturally two types of users—producers and consumers. A consumer is one that participates in daily work-outs, purchases gym tutorials, exchanges for GymCoin rewards, builds on and improves their social characteristics, and interacts with others. A producer is one that trades GymCoins or shares his exercise experience and expertise with the exchange of GymCoins. Smart Contracts: a monetary incentive to users, rewarding users with GymCoins and cash. We developed layered plans for cash bonuses catered to different needs of our users (Specified later). Crypto-currency: crypto-transactions allowed between contracts and users to create a safe environment. Liquidity is preferred and promoted by the mechanisms.
+        <p>Users: the core of GymCoin. We focus on the quantity and quality of users and strive to add socio-economic values to our users by implementing an interactive platform to motivate users and as well as smart contracting for monetary incentive. There are naturally two types of users—producers and consumers. A consumer is one that participates in daily work-outs, purchases gym tutorials, exchanges for GymCoin rewards, claims ownership to interesting collections of images, and interacts with others. A producer is one that trades GymCoins or shares his exercise experience and expertise with the exchange of GymCoins.
         </p>
+        <p>Smart Contracts: a monetary incentive to users, rewarding users with GymCoins and cash. We developed layered plans for cash bonuses catered to different needs of our users (Specified later).</p>
+        <p>Crypto-currency: crypto-transactions allowed between contracts and users to create a safe environment. Liquidity is preferred and promoted by the mechanisms.</p>
+        <p>Scaffold-ETH: a good visualization tool for smart contracts with diverse methods for User Interface. It would be the place of our main page, attracts users to interact with our smart contracts and enables users to query their current status/collections.</p>
 
         <h2>3. Gym Coin Mechanism</h2>
         <ul>
           <li>Access smart devices like watches/rings or running machines, choose your own type of exercise, and trace your heart rate & time for Calories.</li>
-          <li>Get 1 GymCoin for a certain amount of Calories, with a daily limit of 3 GymCoins.</li>
+          <li>Get GymCoins for a certain amount of Calories, with a daily limit of 10 GymCoins.</li>
           <li>GymCoins can be transferred and have no amount limit.</li>
-          <li>Multiple Applications:</li>
+          <li>Multiple applications:</li>
             <ul>
               <li>Layered Plans for cash bonus:(Motivate personal work-out and transaction of GymCoins)</li>
                 <ul>
-                  <li>Get $3 for 7.5 GymCoin per week and $1 penalty</li>
-                  <li>Get $5 for 10 GymCoin per week and $3 penalty</li>
+                  <li>Get 5 extra coins for 25 GymCoin per week and 3 penalty</li>
+                  <li>Get 7 extra coins for 30 GymCoin per week and 4 penalty</li>
+                  <li>Get 9 extra coins for 35 GymCoin per week and 5 penalty</li>
                 </ul>
               <li>Post about your exercise insights and feels and share with your friends!</li>
             </ul>  
         </ul>
-        <font size="2"
-          face="verdana"
-          color="red">
-            TODO: data structure image: need to figure out file location
-        </font>
-      
-
-        <h2>4. Gym Coin Data Structure</h2>
-        <p>Detailed interaction with Smart divides (would be specified later with visualizations)
+        <img src = "https://i.ibb.co/19QGpy0/Gym-Coin-3.jpg" alt = "Gym Coin Mechanism" width = "700" height = "400"></img>
         
-        </p>
         
 
-        <h2>5. Gym Coin Usage</h2>
-        <p>In the gaming platform, users can exchange GymCoins to customize their personal avatar with things like clothes, accessories, shoes, glasses, bags, etc. We will also include mechanisms to change  their physical appearance such as height, muscles, body fat, haircut, facial expressions, etc. Based on their involvement, users can increase their character level and unlock more friend connections and users to play with. Further down the line, we will also implement emotes and other methods of interaction. With these social interactions in place, socialization and communication between GymCoin users is promoted as well as the circulation of GymCoins.
+        <h2>4. Gym Coin Usage</h2>
+        <p>In the NFT platform, we would like to create multiple interesting collections with different topics which can be claimed by users with a certain amount of GymCoins and user-levels. The collections would be limited and can be transferred among users. We hope to bring interesting images as well as those with social responsibilities to our users and increase the socio-economic value of them.</p>
+        <p>In the gaming platform, users can exchange GymCoins to customize their personal avatar with things like clothes, accessories, shoes, glasses, bags, etc. We will also include mechanisms to change  their physical appearance such as height, muscles, body fat, haircut, facial expressions, etc. Based on their involvement, users can increase their character level and unlock more friend connections and users to play with. Further down the line, we will also implement emotes and other methods of interaction. With these social interactions in place, socialization and communication between GymCoin users is promoted as well as the circulation of GymCoins.</p>
+        
+        <h2>5. Reward System & Proof of Work</h2>
+        <p>In order to connect to the GymCoin platform, users are required to connect to smart devices and select the corresponding exercise. Using Apple Watches as an example, it will automatically calculate calories burnt through the user's heart rate. This is also our mechanism to make sure users don’t cheat since their heart rate can not be easily imitated by machines. With the guidance of health experts, we will determine the exchange rate between calories burnt and GymCoins. Once users exchange GymCoins from calories burnt, they can exchange them for cash through the use of smart-contracts or use them directly in the GymCoin social gaming platform. Also, users are recommended to use MetaMask as their interface to connect to our application website, which allows them to keep track of their behavior and double check their identities at each step with a high level of security.
         </p>
+        
 
-        <h2>6. Reward System & Anti-Cheating</h2>
-        <p>In order to connect to the GymCoin platform, users are required to connect to smart devices and select the corresponding exercise. Using Apple Watches as an example, it will automatically calculate calories burnt through the user's heart rate. This is also our mechanism to make sure users don’t cheat since their heart rate can not be easily imitated by machines. With the guidance of health experts, we will determine the exchange rate between calories burnt and GymCoins. Once users exchange GymCoins from calories burnt, they can exchange them for cash through the use of smart-contracts or use them directly in the GymCoin social gaming platform.
-        </p>
+        <h2>6. Why (GymCoin on) Blockchain</h2>
+        <li>It serves as vending machines, with secure transactions, lower compliance costs, and higher transaction speed.</li>
+          <ul>
+              <li><b>Authentic</b> transaction verified and confirmed by participants</li>
+              <li><b>Immutable</b> transactions</li>
+              <li><b>Decentralized</b> data with no fee required</li>
+              <li><b>Non-intermediary</b> rewards for producers</li>
+          </ul>  
+        <li><b>Feasibility</b> – competitive among other decentralized industrial projects.</li>
+          <ul>
+              <li>Banking/Fintech</li>
+              <li>Healthcare/Insurance</li>
+              <li>Supply Chain Management</li>
+              <li>Gaming</li>
+          </ul>  
+        <li><b>Traceability</b> – efficient contract management and data query.</li>
+        
+
+
+        <p>          </p>
+        <p>          </p>
+        <p>     _    </p>
+        <p>          </p>
+        <p>          </p>
+        <p>     _    </p>
       </div>
-
-
-
-
-
-        {/*
-        <span style={{ marginRight: 8, textAlign: "left"}}>📝</span>
-        This is GymCoin Whitepaper{" "}
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          packages/react-app/src/views/Home.jsx
-        </span>
-
-              <div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>✏️</span>
-        Edit your smart contract {" "}
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          YourContract.sol
-        </span>{" "}in{" "}
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          packages/hardhat/contracts
-        </span>
-      </div>
-      {!purpose?<div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>👷‍♀️</span>
-        You haven't deployed your contract yet, run
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          yarn chain
-        </span> and <span
-            className="highlight"
-            style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-          >
-            yarn deploy
-          </span> to deploy your first contract!
-      </div>:<div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>🤓</span>
-        The "purpose" variable from your contract is{" "}
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          {purpose}
-        </span>
-      </div>}
-
-      <div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>🤖</span>
-        An example prop of your balance{" "}
-        <span style={{ fontWeight: "bold", color: "green" }}>({ethers.utils.formatEther(yourLocalBalance)})</span> was
-        passed into the
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          Home.jsx
-        </span>{" "}
-        component from
-        <span
-          className="highlight"
-          style={{ marginLeft: 4,  padding: 4, borderRadius: 4, fontWeight: "bolder" }}
-        >
-          App.jsx
-        </span>
-      </div>
-      <div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>💭</span>
-        Check out the <Link to="/hints">"Hints"</Link> tab for more tips.
-      </div>
-      <div style={{ margin: 32 }}>
-        <span style={{ marginRight: 8 }}>🛠</span>
-        Tinker with your smart contract using the <Link to="/debug">"Debug Contract"</Link> tab.
-      </div>
-         */}
         
       
 
-    </div>
+    // </div>
   );
 }
 

@@ -3,23 +3,13 @@ pragma solidity >=0.8.0 <0.9.0;
 
 // import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol"; 
+import "@openzeppelin/contracts/utils/Strings.sol";
 // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
 contract YourContract is Ownable {
 
-  // event SetPurpose(address sender, string purpose);
-
-//   string public purpose = "Building Unstoppable Apps!!!";
-
   constructor() payable {
-    // what should we do on deploy?
   }
-
-//   function setPurpose(string memory newPurpose) public onlyOwner {
-//       purpose = newPurpose;
-//     //   console.log(msg.sender,"set purpose to",purpose);
-//       // emit SetPurpose(msg.sender, purpose);
-//   }
 
   // to support receiving ETH by default
   receive() external payable {}
@@ -31,7 +21,6 @@ contract YourContract is Ownable {
         uint gymcoin;    // GymCoin amount
     }
 
-    
   struct User {
       bytes32 userID; // Unique ID for each user
       uint [] deviceIDs; // Unique ID for each device
@@ -40,21 +29,22 @@ contract YourContract is Ownable {
       uint contractID; // List of contracts signed
       bool registered; // true means one has already registered and cannot add_user again
       uint timeSigned; // The baseline time of signing one Contract
-      // DateTime time;
-      // mapping(address => uint) approved; //Approved spenders and their limits
-      // mapping(address => uint) approvedBy; //Users who approved this user and the limits
-      // unit level;
   }
 
   struct Post { // Could also do Like System
-      // uint postID;
       bytes32 userID; // Unique ID for each user
       string context;
       uint time;
-      // uint numberOfLikes;
   }
 
   mapping(address => User) public Users;
+  string public purpose = "";
+
+  function fetchBalance() public {
+        User storage sender = Users[msg.sender];
+        purpose =  Strings.toString(sender.balance);
+    }  
+
 
   function Register(bytes32 userid, uint [] memory deviceIDs) public {
         User storage sender = Users[msg.sender];
@@ -71,11 +61,11 @@ contract YourContract is Ownable {
   function add_device(uint newDeviceID) public {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
-
+        // add a new device
         sender.deviceIDs.push(newDeviceID);
   }
 
-  function add_exercise(bytes32 userid, uint deviceid, uint heartrate1, uint workout_time1, uint calories1) public {
+  function add_exercise(bytes32 userid, uint deviceid, uint heartrate1, uint workout_time_in_seconds, uint calories) public {
         User storage sender = Users[msg.sender];
         require(sender.registered == true, "You have not registered.");
         require(sender.userID == userid, "Wrong User ID");
@@ -87,13 +77,12 @@ contract YourContract is Ownable {
         }
         require(Contain == true, "Must use the correct device");
 
-        sender.balance += reward(heartrate1, workout_time1, calories1);
-        // supply += reward(heartrate1, workout_time1, calories1);
+        sender.balance += reward(heartrate1, workout_time_in_seconds, calories);
   }
 
-  function reward(uint heartrate1, uint workout_time1, uint calories1) private pure returns(uint earned){
+  function reward(uint heartrate, uint workout_time_in_seconds, uint calories) private pure returns(uint earned){
       //The formula will divide by the heartrate to make it fair to those people who do weight training
-      earned = calories1 / heartrate1 * workout_time1 / 2000;
+      earned = calories / heartrate * workout_time_in_seconds / 2000;
   }
 
   function transfer(address receiver, uint amount) public returns (bool) {
@@ -105,7 +94,6 @@ contract YourContract is Ownable {
 
         Users[msg.sender].balance -= amount; // GymCoin
         Users[receiver].balance += amount;
-        // emit Transfer(msg.sender, receiver, amount);
         return true;
     }
 
@@ -129,7 +117,7 @@ contract YourContract is Ownable {
         //pre-process
         curr_posts[0] = "Empty";
         curr_posts_time[0] = block.timestamp;
-        // try catch
+
         uint count = 0;
         for (uint i = Posts.length - 1; i > 0; i--) {
             if (userid == Posts[i].userID) {
@@ -151,7 +139,8 @@ contract YourContract is Ownable {
       sender.contractID = contractID;
 
       sender.timeSigned = block.timestamp;
-      // sender.time = DateTime();
+      // check the current balance when signing the contract
+      sender.balance_reset = sender.balance;
   }
 
   function cancelContract() public {
@@ -159,6 +148,7 @@ contract YourContract is Ownable {
       require(sender.registered == true, "You have not registered.");
 
       sender.contractID = 0;
+      sender.balance_reset = 0;
   }
 
   function commitContract() public {
