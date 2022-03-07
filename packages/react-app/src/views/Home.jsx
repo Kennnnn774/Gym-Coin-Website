@@ -17,7 +17,7 @@ function Home({ yourLocalBalance, readContracts }) {
 
   return (
     // <div>
-      <div style={{marginLeft: 100, marginRight:100, marginTop: 10, textAlign: "left" }}>
+      <div style={{marginLeft: 100, marginRight:100, marginTop: 10, marginBottom:1000, textAlign: "left" }}>
         <h2>
           Abstract
         </h2> {/* Abstract */}

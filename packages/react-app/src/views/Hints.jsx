@@ -40,29 +40,35 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
         <p>
           <ol type = "a">
             <li>
-              Register with a string and convert it into Byte32 using "#" icon as your user id & a integer list as initial smart devices
+              Register with a string and convert it into Byte32 using "#" icon as your User ID & a integer list as initial smart devices
             </li>
           </ol>
         </p>
         <img src = "https://i.ibb.co/c2JKM9w/Screen-Shot-2022-02-21-at-7-17-58-PM.png" alt = "Register Gym Coin Account" width = "750" height = "200"></img>
 
-        <h2>3. Add Exercise</h2>
+        <h2>3. Sign/Cancel Contract</h2>
         <p>
           <ol type = "a">
-            <li>For each user id, you can choose the device you’re inputting exercise data from</li>
-            <li>Then you can input your heart rate and workout time</li>
-            <li>The add_exercise() function will automatically reward you gym coin corresponding to your exercises</li>
+            <li>Before loading exercise information and get rewards, you can sign up for an exercise plan</li>
+            <li>Input a number from [100, 200, 300] to the function SignContract, which would give you extra bonus</li>
+              <ol type="1">
+                <li><b>Contract #100</b>: Get 5 extra coins for 25 GymCoin per week and 3 penalty</li>
+                <li><b>Contract #200</b>: Get 7 extra coins for 30 GymCoin per week and 4 penalty</li>
+                <li><b>Contract #300</b>: Get 9 extra coins for 35 GymCoin per week and 5 penalty</li>
+              </ol>
+            <li>You are allowed to cancel your current contract at any time, but the bonus would only count after you sign a new one</li>
+          </ol>
+        </p>
+
+        <h2>4. Add Exercise</h2>
+        <p>
+          <ol type = "a">
+            <li>For each Sser ID, you can choose the device you’re inputting exercise data from</li>
+            <li>Then you can input your heart rate, workout time in minutes, and calories</li>
+            <li>The addExercise() function will automatically reward you the GymCoins corresponding to your exercises</li>
           </ol>
         </p>
         <img src = "https://i.ibb.co/mqJ1gYF/Screen-Shot-2022-02-21-at-7-22-32-PM.png" alt = "Register Gym Coin Account" width = "750" height = "300"></img>
-
-        <h2>4. Add Device</h2>
-        <p>
-          <ol type = "a">
-            <li>You can add more devices whenever you want</li>
-            <li>For example, you can add Fitbit, Apple Watch, Treadmail, Elliptical machines etc</li>
-          </ol>
-        </p>
 
         <h2>5. Transfer</h2>
         <p>
@@ -74,8 +80,15 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
         </p>
         <img src = "https://i.ibb.co/SJpDDtc/Screen-Shot-2022-02-21-at-8-01-54-PM.png" alt = "Register Gym Coin Account" width = "750" height = "200"></img>
 
+        <h2>6. Add Device</h2>
+        <p>
+          <ol type = "a">
+            <li>You can add more devices whenever you want</li>
+            <li>For example, you can add Fitbit, Apple Watch, Treadmail, Elliptical machines etc</li>
+          </ol>
+        </p>
 
-        <h2>6. Post</h2>
+        <h2>7. Post</h2>
         <p>
           <ol type = "a">
             <li>Our platform encourages users to share their exercise insights. Please post comments on your experiences. </li>
@@ -83,12 +96,12 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
           </ol>
         </p>
 
-        <h2>7. Watch Five Posts</h2>
+        {/* <h2>9. Watch Five Posts</h2>
         <p>
           <ol type = "a">
             <li>You can check the most recent five posts of a user. </li>
           </ol>
-        </p>
+        </p> */}
 
         <p>          </p>
         <p>          </p>
