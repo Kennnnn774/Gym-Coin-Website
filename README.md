@@ -69,7 +69,7 @@ Scaffold-ETH: a good visualization tool for smart contracts with diverse methods
 
 Post about your exercise experience and share with your friends!
 
-![alt text](https://github.com/feifanjasmineguan/Blockchain-GymCoin/blob/main/readme_imgs/workflow.png)
+<img src = "https://i.ibb.co/djCM0Qt/96794f36c1f2665ace73e4bbc588dd0.jpg" alt = "Gym Coin Mechanism" width = "850" height = "500"></img>
 
 ### 5. FitBit Integration
 Tracking user heartrates can be done using a FitBit device in which the user allows the GymCoin application to access their FitBit account's profile, devices, activities, and heartrate. The GymCoin application is designed to receive user data through OAuth 2.0 with PKCE for the most secure authorization flow. User data such as calories and heartrate can then be accessed by making a request to the GymCoin API server which makes the proper request to the FitBit API.
