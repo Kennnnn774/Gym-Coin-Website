@@ -33,7 +33,7 @@ export default function ExampleUI({
           <Button
             style={{ marginTop: 8 }}
             onClick={async () => {
-              /* look how you call setPurpose on your contract: */
+
               /* notice how you pass a call back for tx updates too */
               const result = tx(writeContracts.YourContract.fetchBalance(), update => {
                 console.log("📡 Transaction Update:", update);

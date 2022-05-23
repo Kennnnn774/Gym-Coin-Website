@@ -12,7 +12,7 @@ contract YourContract is Ownable {
   }
 
   receive() external payable {}
-  fallback() external payable {}
+  fallback() external payable {} // Default
 
   struct Exercise {
         bytes32 userID;   // Short name (up to 32 bytes)
@@ -30,8 +30,8 @@ contract YourContract is Ownable {
       uint timeSigned; // The baseline time of signing one Contract
   }
 
-  struct Post { // Could also do Like System
-      bytes32 userID; // Unique ID for each user
+  struct Post { 
+      bytes32 userID;
       string context;
       uint time;
   }
@@ -39,16 +39,11 @@ contract YourContract is Ownable {
   mapping(address => User) public Users;
   
   string public purpose = "";
+
   function fetchBalance() public {
         User storage sender = Users[msg.sender];
         purpose =  Strings.toString(sender.balance);
     }
-
-//   function getBalance() public view returns (uint) {
-//       User storage sender = Users[msg.sender];
-//       return sender.balance;
-//   }
-
 
   function Register(bytes32 userID, uint [] memory deviceIDs) public {
         User storage sender = Users[msg.sender];
@@ -92,7 +87,7 @@ contract YourContract is Ownable {
   function Transfer(address receiver, uint amount) public returns (bool) {
         // Teansfer GymCoin
         require(Users[msg.sender].registered && Users[receiver].registered, "Both users must be registered.");
-
+        // Check
         require(Users[msg.sender].balance >= amount, "Insufficient balance.");
         require(amount >= 0);
         // Modify balance

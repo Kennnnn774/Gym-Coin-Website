@@ -265,6 +265,7 @@ function App(props) {
         <Menu.Item key="/exampleui">
           <Link to="/exampleui">Wallet</Link>
         </Menu.Item>
+
         {/* <Menu.Item key="/mainnetdai">
           <Link to="/mainnetdai">Mainnet DAI</Link>
         </Menu.Item>
@@ -293,6 +294,7 @@ function App(props) {
             address={address}
             blockExplorer={blockExplorer}
             contractConfig={contractConfig}
+            purpose={purpose}
           />
         </Route>
         <Route path="/hints">
@@ -395,7 +397,7 @@ function App(props) {
           <Col span={8} style={{ textAlign: "center", opacity: 1 }}>
             <Button
               onClick={() => {
-                window.open("https://github.com/feifanjasmineguan/Blockchain-GymCoin");
+                window.open("https://github.com/Kennnnn774/Gym-Coin-Website");
               }}
               size="large"
               shape="round"
