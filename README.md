@@ -84,11 +84,19 @@ The GymCoin API can then interact with the Ethereum blockchain as a Chainlink ex
 ![alt text](https://github.com/feifanjasmineguan/Blockchain-GymCoin/blob/main/readme_imgs/fitbit_oauth.png)
 
 
-### 6. GymCoin Usage
-In the NFT platform, we would like to create multiple interesting collections with different topics which can be claimed by users with a certain amount of GymCoins and user-levels. The collections would be limited and can be transferred among users. We hope to bring interesting images as well as those with social responsibilities to our users and increase the socio-economic value of them.
+### 6. Tokenomics: GymCoin
+__Supply and Earning__: GymCoin has an unlimited supply and is earned through exercise.
 
-In the gaming platform, users can exchange GymCoins to customize their personal avatar with things like clothes, accessories, shoes, glasses, bags, etc. We will also include mechanisms to change  their physical appearance such as height, muscles, body fat, haircut, facial expressions, etc. Based on their involvement, users can increase their character level and unlock more friend connections and users to play with. Further down the line, we will also implement emotes and other methods of interaction. With these social interactions in place, socialization and communication between GymCoin users is promoted as well as the circulation of GymCoins.
+__Burning and VE Model__:
+
+We would like to create multiple NFT collections with different topics that can be claimed by users with a certain amount of GymCoins and user-levels. The collections would be limited and transferable among users.
+
+In the gaming platform, users can exchange GymCoins to customize their personal avatar with things like clothes, accessories, shoes, glasses, bags, etc. We will also include mechanisms to change their physical appearance such as height, muscles, body fat, haircut, facial expressions, etc. Based on their involvement, users can increase their character level and unlock more friend connections and users to play with. Further down the line, we will also implement emotes and other methods of interaction. With these social interactions in place, socialization and communication between GymCoin users is promoted as well as the circulation of GymCoins.
+
+We would also allow __staking__ in our ecosystem, where users lock their GymCoin to attain more voting power on the daily cap or allocation of GymCoins. Higher staking allows stronger voting power, which promotes users to lock their GymCoin longer and to keep participating. Staking would improve the community in the long term.
 
 
 ### 7. Rewards System & Proof of Work
-In order to connect to the GymCoin platform, users are required to connect to smart devices and select the corresponding exercise. Using Apple Watches as an example, it will automatically calculate calories burnt through the user's heart rate. This is also our mechanism to make sure users don’t cheat since their heart rate can not be easily imitated by machines. With the guidance of health experts, we will determine the exchange rate between calories burnt and GymCoins. Once users exchange GymCoins from calories burnt, they can exchange them for cash through the use of smart-contracts or use them directly in the GymCoin social gaming platform. Also, users are recommended to use MetaMask as their interface to connect to our application website, which allows them to keep track of their behavior and double check their identities at each step with a high level of security.
+In order to connect to the GymCoin platform, users are required to connect to smart devices and select the corresponding exercise. Using Apple Watches as an example, it will automatically calculate calories burnt through the user's heart rate. This is also our mechanism to make sure users don’t cheat since their heart rate can not be easily imitated by machines. We will determine the exchange rate between calories burnt and GymCoins and apply a Machine Learning clustering algorithm to identify anomalies of data.
+
+Once users exchange GymCoins from calories burnt, they can exchange them for cash through the use of smart-contracts or use them directly in the GymCoin social gaming platform. Also, users are recommended to use MetaMask as their interface to connect to our application website, which allows them to keep track of their behavior and double check their identities at each step with a high level of security.
